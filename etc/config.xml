@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <minorderamount>
+            <general>
+                <enable_disable>0</enable_disable>
+                <minamountMsg>The minimum order amount you have to purchase is -conf-.</minamountMsg>
+            </general>
+        </minorderamount>
+    </default>
+</config>

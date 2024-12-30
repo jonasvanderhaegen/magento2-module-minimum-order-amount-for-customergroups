@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="minorderamount"
+                 translate="label"
+                 type="text"
+                 sortOrder="60"
+                 showInDefault="1"
+                 showInWebsite="1"
+                 showInStore="1"
+
+        >
+            <label>Minimum Order Amount For Customer Group</label>
+            <tab>jvdh</tab>
+            <resource>Jvdh_MinOrderAmount::minorderamount</resource>
+            <group id="general"
+                   translate="label"
+                   type="text"
+                   sortOrder="100"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1"
+            >
+                <label>Configuration</label>
+                <field id="enable_disable"
+                       translate="label"
+                       type="select"
+                       sortOrder="1"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1"
+                >
+                    <label>Minimum Order Amount For Customer Group</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="minamount"
+                       translate="label"
+                       sortOrder="110"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="0"
+                >
+                    <label>Minimum Order Amount Allowed</label>
+                    <frontend_model>Jvdh\MinOrderAmount\Block\System\Config\Form\Field\Active</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <depends><field id="enable_disable">1</field></depends>
+                </field>
+                <field id="minamountMsg"
+                       translate="label"
+                       type="text"
+                       sortOrder="120"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1"
+                >
+                    <label>Alert Message</label>
+                    <comment><![CDATA[Make use of "-conf-" to add configuration value.For ex: The minimum amount you have to order is -conf-. Maximum 100 characters allowed for the message.]]></comment>
+                    <depends><field id="enable_disable">1</field></depends>
+                    <validate>required-entry validate-length minimum-length-0 maximum-length-100</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
