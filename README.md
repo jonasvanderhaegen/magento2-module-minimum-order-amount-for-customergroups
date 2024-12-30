@@ -4,7 +4,7 @@ This Magento 2 module enforces a **minimum order amount** requirement for both s
 
 Magento’s native functionality for minimum order amount—when enabled—applies the same threshold to all customer groups universally. This means there’s no built-in way to allow different minimums for, say, wholesale vs. retail customers, or to exclude specific groups entirely.
 
-Administrators can specify exactly which customer groups should be subject to a minimum order amount, and what that minimum should be for each group. It reads from a configurable JSON structure (e.g., { "customer_group": "X", "active": Y }) so that each group can have a tailored threshold or no threshold at all. This makes the feature far more flexible and aligns it better with diverse pricing strategies.
+With this module administrators can specify exactly which customer groups should be subject to a minimum order amount, and what that minimum should be for each group. It reads from a configurable JSON structure (e.g., { "customer_group": "X", "active": Y }) so that each group can have a tailored threshold or no threshold at all. This makes the feature far more flexible and aligns it better with diverse pricing strategies.
 
 ## Features
 1. **Configurable Minimum Thresholds**  
