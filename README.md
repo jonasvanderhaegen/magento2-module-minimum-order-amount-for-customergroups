@@ -46,8 +46,8 @@ This Magento 2 module enforces a **minimum order amount** requirement for both s
    - For example:  
      ```json
      [
-       { "customer_group": 1, "active": 50 },
-       { "customer_group": 2, "active": 75 }
+       { "customergroup_id": 1, "active": 50 },
+       { "customergroup_id": 2, "active": 75 }
      ]
      ```
      This indicates that **customer group 1** needs a minimum of **$50**, and **customer group 2** needs **$75**.

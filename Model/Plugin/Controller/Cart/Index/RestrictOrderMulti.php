@@ -77,13 +77,13 @@ class RestrictOrderMulti
             $itemAmount = $this->helper->itemTotal();
 
             // Get the minimum amounts from config, parsed from JSON.
-            // Example JSON structure: [{"customer_group": "3", "active": 100}, ...]
+            // Example JSON structure: [{"customergroup_id": "3", "active": 100}, ...]
             $minAmountData = $this->helper->minCartAmount();
             $dataDecode = json_decode($minAmountData);
 
             // Check if there's a matching customer group in the config data
             foreach ($dataDecode as $value) {
-                if ($val == $value->customer_group) {
+                if ($val == $value->customergroup_id) {
                     // Use the "active" property as the threshold for this group
                     $thresholdmin = $value->active;
                     break;

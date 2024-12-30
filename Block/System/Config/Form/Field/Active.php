@@ -34,7 +34,7 @@ class Active extends AbstractFieldArray
     protected function _prepareToRender(): void
     {
         $this->addColumn(
-            'customer_group',
+            'customergroup_id',
             [
                 'label' => __('Customer Group'), 'size' => '300px',
                 'renderer' => $this->getCustomerGroupRenderer(),

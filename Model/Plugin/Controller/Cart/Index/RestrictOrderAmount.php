@@ -84,13 +84,13 @@ class RestrictOrderAmount
             $itemAmount = $this->helper->itemTotal();
 
             // Retrieve the configured minimum amounts and parse as JSON
-            // This structure might look like: [{"customer_group": "1", "active": 100}, ...]
+            // This structure might look like: [{"customergroup_id": "1", "active": 100}, ...]
             $minAmountData = $this->helper->minCartAmount();
             $dataDecode = json_decode($minAmountData);
 
             // Loop through the decoded JSON to find the matching group
             foreach ($dataDecode as $value) {
-                if ($val == $value->customer_group) {
+                if ($val == $value->customergroup_id) {
                     // Once found, store the "active" property as the threshold
                     $thresholdmin = $value->active;
                     break;
